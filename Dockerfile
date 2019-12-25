@@ -1,4 +1,4 @@
-FROM debian:10.1-slim
+FROM adoptopenjdk/openjdk9
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -12,9 +12,6 @@ ENV LANG en_US.UTF-8
 ENV TZ=UTC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-    # Java 8
-RUN mkdir /usr/share/man/man1 && wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add - && add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ 
-RUN apt-get update && apt-get -y install adoptopenjdk-9
 RUN java -version
 
 USER container
