@@ -3,11 +3,11 @@
     "meta": {
         "version": "PTDL_v1"
     },
-    "exported_at": "2019-12-25T03:49:02-05:00",
-    "name": "Java10",
+    "exported_at": "2019-12-25T03:53:19-05:00",
+    "name": "Java11",
     "author": "itznya10@gmail.com",
-    "description": "Java10",
-    "image": "registry.gitlab.com\/devil38\/fork-rewrite:java10",
+    "description": "Java11",
+    "image": "registry.gitlab.com\/devil38\/fork-rewrite:java11",
     "startup": ".\/start.sh",
     "config": {
         "files": "{}",
