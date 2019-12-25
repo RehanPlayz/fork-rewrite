@@ -12,11 +12,11 @@ ENV LANG en_US.UTF-8
 ENV TZ=UTC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-   # Composer & PHP7.3
+   # Composer & PHP7.4
 RUN apt-get update && apt-get -y install wget gnupg2
 RUN wget -qO - https://packages.sury.org/php/apt.gpg | apt-key add -
 RUN echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/php7.x.list
-RUN apt-get update && apt-get install -y php7.3 php7.3-cli php7.3-gd php7.3-pdo php7.3-mbstring php7.3-tokenizer php7.3-bcmath php7.3-xml php7.3-curl php7.3-zip && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+RUN apt-get update && apt-get install -y php7.4 php7.4-cli php7.4-gd php7.4-pdo php7.4-mbstring php7.4-tokenizer php7.4-bcmath php7.4-xml php7.4-curl php7.4-zip && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 USER container
 ENV  USER container

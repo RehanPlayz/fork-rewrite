@@ -3,11 +3,11 @@
     "meta": {
         "version": "PTDL_v1"
     },
-    "exported_at": "2019-12-25T04:53:09-05:00",
-    "name": "PHP-7.3",
+    "exported_at": "2019-12-25T04:55:05-05:00",
+    "name": "PHP-7.4",
     "author": "itznya10@gmail.com",
-    "description": "PHP 7.3",
-    "image": "registry.gitlab.com\/devil38\/fork-rewrite:php7.3",
+    "description": "PHP 7.4",
+    "image": "registry.gitlab.com\/devil38\/fork-rewrite:php7.4",
     "startup": ".\/start.sh",
     "config": {
         "files": "{}",
