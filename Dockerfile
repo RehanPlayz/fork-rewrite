@@ -1,4 +1,4 @@
-FROM debian:10.1-slim
+FROM adoptopenjdk/openjdk9-openj9
 
 ENV DEBIAN_FRONTEND noninteractive
 
