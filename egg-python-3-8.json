@@ -4,10 +4,10 @@
         "version": "PTDL_v1"
     },
     "exported_at": "2019-12-25T06:50:59-05:00",
-    "name": "Python-3.7",
+    "name": "Python-3.8",
     "author": "itznya10@gmail.com",
-    "description": "Python3.7",
-    "image": "registry.gitlab.com\/devil38\/fork-rewrite:python3.7",
+    "description": "Python3.8",
+    "image": "registry.gitlab.com\/devil38\/fork-rewrite:python3.8",
     "startup": ".\/start.sh",
     "config": {
         "files": "{}",
