@@ -1,0 +1,54 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v1"
+    },
+    "exported_at": "2019-12-21T04:59:05-05:00",
+    "name": "RethinkDB",
+    "author": "itznya10@gmail.com",
+    "description": "Meh",
+    "image": "registry.gitlab.com\/devil38\/rethinkdb:latest",
+    "startup": ".\/start.sh",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"\",\r\n    \"userInteraction\": []\r\n}",
+        "logs": "{}",
+        "stop": "^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!\/bin\/bash\r\necho hi",
+            "container": "ubuntu:18.04",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": [
+        {
+            "name": "Web interface port",
+            "description": "HTTP\r\nDefault port is 8080",
+            "env_variable": "HTTP_PORT",
+            "default_value": "8080",
+            "user_viewable": 1,
+            "user_editable": 1,
+            "rules": "required|string|max:200"
+        },
+        {
+            "name": "Cluster port",
+            "description": "Cluster\r\nDefault port is 29015",
+            "env_variable": "CLUSTER_PORT",
+            "default_value": "29015",
+            "user_viewable": 1,
+            "user_editable": 1,
+            "rules": "required|string|max:200"
+        },
+        {
+            "name": "Admin password",
+            "description": "Admin account password",
+            "env_variable": "ADMIN_PASSWORD",
+            "default_value": "replace-me",
+            "user_viewable": 1,
+            "user_editable": 1,
+            "rules": "required|string|max:200"
+        }
+    ]
+}
