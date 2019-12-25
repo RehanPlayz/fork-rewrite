@@ -12,4 +12,4 @@ build:
     - docker build --pull -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG" .
     - docker push "$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG"
   only:
-    - java10-openj9
+    - java11-openj9
