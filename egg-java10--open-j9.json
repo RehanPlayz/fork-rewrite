@@ -3,11 +3,11 @@
     "meta": {
         "version": "PTDL_v1"
     },
-    "exported_at": "2019-12-25T03:40:37-05:00",
-    "name": "Java9-OpenJ9",
+    "exported_at": "2019-12-25T03:51:08-05:00",
+    "name": "Java10-OpenJ9",
     "author": "itznya10@gmail.com",
-    "description": "Java9 OpenJ9",
-    "image": "registry.gitlab.com\/devil38\/fork-rewrite:java9-openj9",
+    "description": "Java10 OpenJ9",
+    "image": "registry.gitlab.com\/devil38\/fork-rewrite:java10-openj9",
     "startup": ".\/start.sh",
     "config": {
         "files": "{}",

@@ -14,7 +14,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
     # OpenJ9
 RUN mkdir /usr/share/man/man1 && wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add - && add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ 
-RUN apt-get update && apt-get -y install adoptopenjdk-9-openj9 adoptopenjdk-9-openj9-jre
+RUN apt-get update && apt-get -y install adoptopenjdk-10-openj9 adoptopenjdk-10-openj9-jre
 RUN java -version && javac -version
 
 USER container
