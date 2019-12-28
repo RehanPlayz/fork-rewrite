@@ -7,7 +7,7 @@
     "name": "Python-3.7",
     "author": "itznya10@gmail.com",
     "description": "Python3.7",
-    "image": "registry.gitlab.com\/devil38\/fork-rewrite:python3.7",
+    "image": "registry.gitlab.com\/devil38\/fork-rewrite:python3-7",
     "startup": ".\/start.sh",
     "config": {
         "files": "{}",
