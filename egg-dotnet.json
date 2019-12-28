@@ -6,7 +6,7 @@
     "exported_at": "2019-12-25T02:04:05-05:00",
     "name": "Dotnet",
     "author": "itznya10@gmail.com",
-    "description": "Dotnet 2.2",
+    "description": "Dotnet 3.1",
     "image": "registry.gitlab.com\/devil38\/fork-rewrite:dotnet",
     "startup": ".\/start.sh",
     "config": {
