@@ -15,12 +15,12 @@ RUN apt-get update -qq -y && apt-get -y install \
     wget \
     libicu63 \
     libssl1.1
-    # libc6 \
-    # libgcc1 \
-    # libgssapi-krb5-2 \
-    # liblttng-ust0 \
-    # libstdc++6 \
-    # zlib1g
+    libc6 \
+    libgcc1 \
+    libgssapi-krb5-2 \
+    liblttng-ust0 \
+    libstdc++6 \
+    zlib1g
 RUN dotnet_sdk_version=3.1.100 \
     && curl -SL --output dotnet.tar.gz https://dotnetcli.azureedge.net/dotnet/Sdk/$dotnet_sdk_version/dotnet-sdk-$dotnet_sdk_version-linux-x64.tar.gz \
     && dotnet_sha512='5217ae1441089a71103694be8dd5bb3437680f00e263ad28317665d819a92338a27466e7d7a2b1f6b74367dd314128db345fa8fff6e90d0c966dea7a9a43bd21' \
