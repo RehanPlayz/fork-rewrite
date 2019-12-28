@@ -3,7 +3,7 @@
     "meta": {
         "version": "PTDL_v1"
     },
-    "exported_at": "2019-10-29T16:58:16-04:00",
+    "exported_at": "2019-12-28T10:26:14+01:00",
     "name": "Nginx",
     "author": "itznya10@gmail.com",
     "description": "Pterodactyl Nginx",
@@ -17,9 +17,9 @@
     },
     "scripts": {
         "installation": {
-            "script": "#!\/bin\/ash\r\n\r\ncd \/mnt\/server\r\n\r\napk --update add git wget zip unzip\r\n\r\ncd \/mnt\/server\/\r\nwget https:\/\/gitlab.com\/devil38\/fork\/raw\/master\/nginx.zip\r\nunzip -o nginx.zip\r\nrm nginx.zip",
-            "container": "alpine:latest",
-            "entrypoint": "ash"
+            "script": "#!\/bin\/bash\r\n\r\napt-get update -y && apt-get install -y git wget zip unzip\r\n\r\ncd \/mnt\/server\/\r\nwget https:\/\/gitlab.com\/devil38\/fork-rewrite\/raw\/nginx\/nginx.zip\r\nunzip -o nginx.zip\r\nrm nginx.zip",
+            "container": "debian:10.1-slim",
+            "entrypoint": "bash"
         }
     },
     "variables": []
