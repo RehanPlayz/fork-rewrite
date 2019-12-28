@@ -7,7 +7,7 @@
     "name": "PHP-7.4",
     "author": "itznya10@gmail.com",
     "description": "PHP 7.4",
-    "image": "registry.gitlab.com\/devil38\/fork-rewrite:php7.4",
+    "image": "registry.gitlab.com\/devil38\/fork-rewrite:php7-4",
     "startup": ".\/start.sh",
     "config": {
         "files": "{}",
