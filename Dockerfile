@@ -16,7 +16,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get update \
     && apt-get -y install libopus0 nodejs npm node-gyp \
-    && npm install discord.js node-opus canvas opusscript \
+    && npm install discord.js axios noblox.js moment-duration-format node-opus canvas opusscript \
     && npm install sqlite3 --build-from-source 
 RUN npm i npm@latest -g
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
