@@ -3,7 +3,7 @@ FROM python:3.8.1-slim-buster
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update \
-    && apt-get -y install apt-utils zip unzip curl software-properties-common apt-transport-https ca-certificates wget dirmngr gnupg iproute2 libopus0 make g++ locales git cmake \
+    && apt-get -y install apt-utils curl software-properties-common apt-transport-https ca-certificates wget dirmngr gnupg iproute2 make g++ locales git cmake \
     && useradd -d /home/container -m container
 
     # Ensure UTF-8
