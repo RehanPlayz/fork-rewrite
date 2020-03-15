@@ -8,15 +8,10 @@ RUN apt-get update \
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV TZ=UTC
+ENV DOTNET_RUNNING_IN_CONTAINER=true
+ENV DOTNET_USE_POLLING_FILE_WATCHER=true
+ENV NUGET_XMLDOC_MODE=skip
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
-ENV \
-    # Enable detection of running in a container
-    DOTNET_RUNNING_IN_CONTAINER=true \
-    # Enable correct mode for dotnet watch (only mode supported in a container)
-    DOTNET_USE_POLLING_FILE_WATCHER=true \
-    # Skip extraction of XML docs - generally not useful within an image/container - helps performance
-    NUGET_XMLDOC_MODE=skip \
 
 # Install .NET CLI dependencies
 RUN apt-get update \
