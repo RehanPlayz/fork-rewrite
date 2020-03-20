@@ -1,4 +1,4 @@
-FROM debian:10.1-slim
+FROM arm32v7/debian:buster-slim
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -23,7 +23,6 @@ ENV  HOME /home/container
 
 WORKDIR /home/container
 
-COPY ./start.sh /start.sh
 COPY ./entrypoint.sh /entrypoint.sh
 
 CMD ["/bin/bash", "/entrypoint.sh"]
