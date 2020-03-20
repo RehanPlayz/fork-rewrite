@@ -1,5 +1,7 @@
 FROM arm32v7/debian:buster-slim
 
+COPY qemu-arm-static /usr/bin/qemu-arm-static
+
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update 
@@ -24,8 +26,5 @@ ENV  HOME /home/container
 WORKDIR /home/container
 
 COPY ./entrypoint.sh /entrypoint.sh
-
-CMD ["/bin/bash", "/entrypoint.sh"]
-ypoint.sh
 
 CMD ["/bin/bash", "/entrypoint.sh"]
