@@ -1,4 +1,4 @@
-FROM arm32v7/debian:buster-slim
+FROM arm32v7/debian:stretch-slim
 
 ENV DEBIAN_FRONTEND noninteractive
 
