@@ -3,8 +3,10 @@ FROM debian:9.11-slim
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update \
-    && apt-get -y install apt-utils ffmpeg curl software-properties-common apt-transport-https ca-certificates wget dirmngr gnupg iproute2 libopus0 make g++ locales git ffmpeg cmake \
-    && useradd -d /home/container -m container
+    && apt-get -y install apt-utils ffmpeg curl software-properties-common apt-transport-https ca-certificates wget dirmngr gnupg iproute2 libopus0 make g++ locales git ffmpeg cmake zip unzip
+RUN addgroup --gid 998 container 
+RUN useradd -r -u 999 -d /home/container -g container -m container
+
 
     # Ensure UTF-8
 RUN locale-gen en_US.UTF-8
