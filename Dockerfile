@@ -3,7 +3,7 @@ FROM adoptopenjdk/openjdk10
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update
-RUN apt-get -y install apt-utils curl software-properties-common apt-transport-https ca-certificates wget dirmngr gnupg iproute2 libopus0 make g++ locales git cmake 
+RUN apt-get -y install apt-utils curl software-properties-common apt-transport-https ca-certificates wget dirmngr gnupg iproute2 libopus0 make g++ locales git cmake zip unzip
 RUN addgroup --gid 998 container 
 RUN useradd -r -u 999 -d /home/container -g container -m container
 
