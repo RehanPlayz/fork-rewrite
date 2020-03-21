@@ -1,8 +1,9 @@
 FROM debian:10.1-slim
 
 RUN apt-get update \
-    && apt-get -y install apt-utils curl software-properties-common apt-transport-https ca-certificates wget tar dirmngr gnupg iproute2 libopus0 make g++ locales git cmake \
-    && useradd -d /home/container -m container
+    && apt-get -y install apt-utils curl software-properties-common apt-transport-https ca-certificates wget tar dirmngr gnupg iproute2 libopus0 make g++ locales git cmake 
+RUN addgroup --gid 998 container 
+RUN useradd -r -u 999 -d /home/container -g container -m container
 
     # Ensure UTF-8
 RUN locale-gen en_US.UTF-8
