@@ -6,3 +6,4 @@ docker build -t . name-tag
 
 # alternative
 https://mirailabs.io/blog/multiarch-docker-with-buildx/
+docker run --rm --privileged multiarch/qemu-user-static --reset
