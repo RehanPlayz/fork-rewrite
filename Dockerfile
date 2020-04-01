@@ -17,7 +17,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
         # NodeJS
 RUN curl -sL https://deb.nodesource.com/setup_11.x | bash -
 RUN apt-get update \
-    && apt-get -y install libopus0 nodejs npm node-gyp \
+    && apt-get -y install nodejs npm node-gyp \
     && npm install discord.js node-opus canvas opusscript \
     && npm install sqlite3 --build-from-source 
 RUN npm i npm@latest -g
