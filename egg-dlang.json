@@ -4,10 +4,10 @@
         "version": "PTDL_v1"
     },
     "exported_at": "2019-12-25T02:53:14-05:00",
-    "name": "Crystal",
+    "name": "Dlang",
     "author": "itznya10@gmail.com",
-    "description": "Crystal",
-    "image": "registry.gitlab.com\/devil38\/fork-rewrite:crystal",
+    "description": "Dlang",
+    "image": "registry.gitlab.com\/devil38\/fork-rewrite:dlang",
     "startup": ".\/start.sh",
     "config": {
         "files": "{}",
