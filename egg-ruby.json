@@ -4,10 +4,10 @@
         "version": "PTDL_v1"
     },
     "exported_at": "2019-12-25T02:53:14-05:00",
-    "name": "NodeJS-10",
+    "name": "Ruby",
     "author": "itznya10@gmail.com",
-    "description": "NodeJS 10",
-    "image": "registry.gitlab.com\/devil38\/fork-rewrite:nodejs10",
+    "description": "Ruby",
+    "image": "registry.gitlab.com\/devil38\/fork-rewrite:ruby",
     "startup": ".\/start.sh",
     "config": {
         "files": "{}",
@@ -18,7 +18,7 @@
     "scripts": {
         "installation": {
             "script": "#!\/bin\/bash\r\necho hi",
-            "container": "ubuntu:18.04",
+            "container": "debian:buster-slim",
             "entrypoint": "bash"
         }
     },
