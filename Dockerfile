@@ -13,10 +13,10 @@ ENV LANG en_US.UTF-8
 ENV TZ=UTC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-        # Ruby
-RUN apt-get update \
-    && apt-get -y install ruby ruby-dev \
-    && gem install discordrb
+        # Crystal
+RUN curl -sL "https://keybase.io/crystal/pgp_keys.asc" | apt-key add -
+RUN echo "deb https://dist.crystal-lang.org/apt crystal main" | tee /etc/apt/sources.list.d/crystal.list
+RUN apt-get update && apt-get -y install crystal libssl-dev libxml2-dev libyaml-dev libgmp-dev libreadline-dev libz-dev
 
 USER container
 ENV  USER container
