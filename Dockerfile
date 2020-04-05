@@ -3,7 +3,7 @@ FROM python:3.8.2-slim-buster
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update \
-    && apt-get -y install apt-utils curl jq ffmpeg software-properties-common apt-transport-https ca-certificates wget dirmngr gnupg iproute2 libopus0 make g++ locales git cmake zip unzip libtool-bin autoconf automake
+    && apt-get -y install apt-utils curl jq ffmpeg software-properties-common apt-transport-https ca-certificates wget dirmngr gnupg iproute2 libopus0 make g++ locales git cmake zip unzip
 RUN addgroup --gid 998 container 
 RUN useradd -r -u 999 -d /home/container -g container -m container
 
@@ -27,6 +27,7 @@ ENV GOPATH=$HOME/go
 RUN go get github.com/bwmarrin/discordgo
 
     # Java 8
+RUN mkdir /usr/share/man/man1
 RUN wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add - && add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ 
 RUN apt-get update && apt-get -y install adoptopenjdk-8-hotspot
 RUN java -version
@@ -37,7 +38,6 @@ RUN curl -O https://download.clojure.org/install/linux-install-1.10.1.536.sh
 RUN chmod +x linux-install-1.10.1.536.sh && bash linux-install-1.10.1.536.sh
 
     # NodeJS
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get update \
     && apt-get -y install nodejs npm sqlite3 node-gyp \
     && npm install discord.js node-opus canvas opusscript 
