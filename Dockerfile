@@ -14,7 +14,7 @@ ENV TZ=UTC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
     # Python2.7
-RUN apt-get update && apt-get -y install python2.7 libffi-dev mono-complete 
+RUN apt-get update && apt-get -y install python2.7 libffi-dev
 
 USER container
 ENV  USER container
