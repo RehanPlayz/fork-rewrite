@@ -4,10 +4,10 @@
         "version": "PTDL_v1"
     },
     "exported_at": "2019-12-25T06:47:41-05:00",
-    "name": "Python-3.6",
+    "name": "Python-2.7",
     "author": "itznya10@gmail.com",
-    "description": "Python3.6",
-    "image": "registry.gitlab.com\/devil38\/fork-rewrite:python3-6",
+    "description": "Python2.7",
+    "image": "registry.gitlab.com\/devil38\/fork-rewrite:python2-7",
     "startup": ".\/start.sh",
     "config": {
         "files": "{}",
@@ -18,7 +18,7 @@
     "scripts": {
         "installation": {
             "script": "#!\/bin\/bash\r\necho hi",
-            "container": "ubuntu:18.04",
+            "container": "debian:buster-slim",
             "entrypoint": "bash"
         }
     },
