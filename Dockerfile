@@ -14,7 +14,7 @@ ENV TZ=UTC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
     # Python3
-RUN apt-get update && apt-get -y install python2.7 python2-pip libffi-dev mono-complete \
+RUN apt-get update && apt-get -y install python2.7 pip libffi-dev mono-complete \
     && pip install aiohttp websockets pynacl opuslib \
     && python2.7 -m pip install -U discord.py[voice]
 
