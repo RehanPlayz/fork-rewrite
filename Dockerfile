@@ -13,10 +13,10 @@ ENV LANG en_US.UTF-8
 ENV TZ=UTC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-    # Python3
+    # Python2.7
 RUN apt-get update && apt-get -y install python2.7 pip libffi-dev mono-complete \
     && pip install aiohttp websockets pynacl opuslib \
-    && python2.7 -m pip install -U discord.py[voice]
+    && python -m pip install -U discord.py[voice]
 
 USER container
 ENV  USER container
