@@ -6,7 +6,6 @@ RUN apt-get update \
     && apt-get -y install apt-utils ffmpeg curl software-properties-common apt-transport-https ca-certificates wget dirmngr gnupg iproute2 libopus0 make g++ locales git ffmpeg cmake zip unzip libtool-bin autoconf automake libsodium18
 RUN addgroup --gid 998 container
 RUN useradd -r -u 999 -d /home/container -g container -m container
-RUN apt-get update && apt-get install -y youtube-dl libav-tools && youtube-dl -U
 
     # Ensure UTF-8
 RUN locale-gen en_US.UTF-8
