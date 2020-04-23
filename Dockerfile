@@ -14,7 +14,7 @@ ENV TZ=UTC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
         # NodeJS
-RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get update \
     && apt-get -y install nodejs npm node-gyp \
     && npm install discord.js node-opus canvas opusscript \

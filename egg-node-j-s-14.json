@@ -6,8 +6,8 @@
     "exported_at": "2019-12-25T03:06:20-05:00",
     "name": "NodeJS-12",
     "author": "itznya10@gmail.com",
-    "description": "NodeJS 12",
-    "image": "registry.gitlab.com\/devil38\/fork-rewrite:nodejs12",
+    "description": "NodeJS 14",
+    "image": "registry.gitlab.com\/devil38\/fork-rewrite:nodejs14",
     "startup": ".\/start.sh",
     "config": {
         "files": "{}",
@@ -18,7 +18,7 @@
     "scripts": {
         "installation": {
             "script": "#!\/bin\/bash\r\necho hi",
-            "container": "ubuntu:18.04",
+            "container": "debian:buster-slim",
             "entrypoint": "bash"
         }
     },
