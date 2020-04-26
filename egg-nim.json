@@ -4,10 +4,10 @@
         "version": "PTDL_v1"
     },
     "exported_at": "2019-12-25T02:12:02-05:00",
-    "name": "Golang",
+    "name": "Nim",
     "author": "itznya10@gmail.com",
-    "description": "Golang",
-    "image": "registry.gitlab.com\/devil38\/fork-rewrite:golang",
+    "description": "Nim",
+    "image": "registry.gitlab.com\/devil38\/fork-rewrite:nim",
     "startup": ".\/start.sh",
     "config": {
         "files": "{}",
@@ -18,7 +18,7 @@
     "scripts": {
         "installation": {
             "script": "#!\/bin\/bash\r\necho hi",
-            "container": "ubuntu:18.04",
+            "container": "debian:buster-slim",
             "entrypoint": "bash"
         }
     },
