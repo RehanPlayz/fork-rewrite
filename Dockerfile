@@ -1,4 +1,4 @@
-FROM debian:9.11-slim
+FROM swift:5.2.2-bionic-slim
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -12,9 +12,6 @@ RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV TZ=UTC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
-        # Dlang
-RUN apt-get update && apt-get -y install dub && dub fetch dscord
 
 USER container
 ENV  USER container
