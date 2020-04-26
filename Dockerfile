@@ -1,4 +1,4 @@
-FROM python:3.7.6-slim-buster
+FROM python:3.4.10-slim-stretch
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -14,7 +14,7 @@ ENV TZ=UTC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
     # Python3
-RUN apt-get update && apt-get -y install python3.7 python3-pip libffi-dev \
+RUN apt-get update && apt-get -y install python3-pip libffi-dev \
     && pip3 install aiohttp websockets pynacl opuslib \
     && python3 -m pip install -U discord.py[voice]
 
