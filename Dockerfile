@@ -11,8 +11,8 @@ ENV LANG en_US.UTF-8
 ENV TZ=UTC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-    # Nim
-RUN apt-get update && apt-get -y install nim
+    # Scala
+RUN apt-get update && apt-get -y install scala
 
 USER container
 ENV  USER container

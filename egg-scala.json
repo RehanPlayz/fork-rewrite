@@ -4,10 +4,10 @@
         "version": "PTDL_v1"
     },
     "exported_at": "2019-12-25T02:12:02-05:00",
-    "name": "Nim",
+    "name": "Scala",
     "author": "itznya10@gmail.com",
-    "description": "Nim",
-    "image": "registry.gitlab.com\/devil38\/fork-rewrite:nim",
+    "description": "Scala",
+    "image": "registry.gitlab.com\/devil38\/fork-rewrite:scala",
     "startup": ".\/start.sh",
     "config": {
         "files": "{}",
