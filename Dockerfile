@@ -12,7 +12,7 @@ ENV TZ=UTC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
     # Scala
-RUN apt-get update && apt-get -y install scala
+RUN apt-get update && apt-get -y install clojure
 
 USER container
 ENV  USER container

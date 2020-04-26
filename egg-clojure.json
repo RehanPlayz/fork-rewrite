@@ -4,10 +4,10 @@
         "version": "PTDL_v1"
     },
     "exported_at": "2019-12-25T02:12:02-05:00",
-    "name": "Scala",
+    "name": "Clojure",
     "author": "itznya10@gmail.com",
-    "description": "Scala",
-    "image": "registry.gitlab.com\/devil38\/fork-rewrite:scala",
+    "description": "Clojure",
+    "image": "registry.gitlab.com\/devil38\/fork-rewrite:clojure",
     "startup": ".\/start.sh",
     "config": {
         "files": "{}",
