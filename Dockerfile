@@ -16,7 +16,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
     # Python3
 RUN apt-get update && apt-get -y install python3.7 libx11-xcb-dev python3-pip libffi-dev \
-    && pip3 install aiohttp websockets pynacl opuslib \
+    && pip3 install aiohttp websockets pynacl pychrome opuslib \
     && python3 -m pip install -U discord.py[voice]
 
 USER container
