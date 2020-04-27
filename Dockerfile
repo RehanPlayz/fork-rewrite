@@ -13,7 +13,7 @@ ENV LANG en_US.UTF-8
 ENV TZ=UTC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-    # Python2.7
+    # Mono
 RUN apt-get update && apt-get -y install mono-complete
 
 USER container
