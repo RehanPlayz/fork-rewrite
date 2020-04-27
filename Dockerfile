@@ -1,4 +1,4 @@
-FROM python:2.7.17-slim-buster
+FROM debian:buster-slim
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -14,7 +14,7 @@ ENV TZ=UTC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
     # Python2.7
-RUN apt-get update && apt-get -y install python2.7 libffi-dev libx11-xcb-dev
+RUN apt-get update && apt-get -y install mono-complete
 
 USER container
 ENV  USER container
