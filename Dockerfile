@@ -15,6 +15,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
     # Python2.7
 RUN apt-get update && apt-get -y install python2.7 libffi-dev libx11-xcb-dev
+RUN pip install -U pychrome
 
 USER container
 ENV  USER container
