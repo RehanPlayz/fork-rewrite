@@ -3,7 +3,7 @@ FROM python:2.7.17-slim-buster
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update \
-    && apt-get -y install apt-utils curl software-properties-common apt-transport-https ca-certificates wget dirmngr gnupg iproute2 make g++ locales git cmake
+    && apt-get -y install apt-utils curl software-properties-common apt-transport-https ca-certificates wget dirmngr gnupg iproute2 make g++ locales git cmake libespeak-dev espeak
 RUN addgroup --gid 998 container 
 RUN useradd -r -u 999 -d /home/container -g container -m container
 
