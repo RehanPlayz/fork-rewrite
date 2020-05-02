@@ -25,6 +25,7 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources
 RUN apt-get update && apt-get -y install yarn
 RUN npm install -g nodemon && nodemon -v
 RUN npm install -g coffeescript typescript
+RUN apt-get update && apt-get -y install dnsutils python3 build-essential
 
 USER container
 ENV  USER container
