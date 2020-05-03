@@ -3,7 +3,7 @@ FROM python:3.7.6-slim-buster
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update \
-    && apt-get -y install apt-utils ffmpeg youtube-dl curl python3-pip libffi-dev software-properties-common apt-transport-https ca-certificates wget dirmngr gnupg iproute2 make g++ locales git cmake libespeak-dev espeak sox libsox-fmt-mp3 libespesk1
+    && apt-get -y install apt-utils ffmpeg youtube-dl curl python3-pip libffi-dev software-properties-common apt-transport-https ca-certificates wget dirmngr gnupg iproute2 make g++ locales git cmake libespeak-dev espeak sox libsox-fmt-mp3 libespeak1
 RUN addgroup --gid 998 container 
 RUN useradd -r -u 999 -d /home/container -g container -m container
 
