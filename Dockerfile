@@ -27,6 +27,11 @@ RUN npm install -g nodemon && nodemon -v
 RUN npm install -g coffeescript typescript
 RUN apt-get update && apt-get -y install dnsutils python3 build-essential
 
+    # Java 8
+RUN mkdir -p /usr/share/man/man1 && wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add - && add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ 
+RUN apt-get update && apt-get -y install adoptopenjdk-8-hotspot
+RUN java -version
+
 USER container
 ENV  USER container
 ENV  HOME /home/container
@@ -37,3 +42,5 @@ COPY ./start.sh /start.sh
 COPY ./entrypoint.sh /entrypoint.sh
 
 CMD ["/bin/bash", "/entrypoint.sh"]
+
+
