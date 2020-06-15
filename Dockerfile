@@ -27,6 +27,11 @@ RUN npm install -g nodemon && nodemon -v
 RUN npm install -g coffeescript typescript
 RUN apt-get update && apt-get -y install dnsutils python3 build-essential
 
+     # Java 11
+RUN mkdir /usr/share/man/man1 && wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add - && add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ 
+RUN apt-get update && apt-get -y install adoptopenjdk-11-hotspot
+RUN java -version
+
 USER container
 ENV  USER container
 ENV  HOME /home/container
