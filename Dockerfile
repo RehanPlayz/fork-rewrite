@@ -37,3 +37,12 @@ COPY ./start.sh /start.sh
 COPY ./entrypoint.sh /entrypoint.sh
 
 CMD ["/bin/bash", "/entrypoint.sh"]
+ container
+ENV  HOME /home/container
+
+WORKDIR /home/container
+
+COPY ./start.sh /start.sh
+COPY ./entrypoint.sh /entrypoint.sh
+
+CMD ["/bin/bash", "/entrypoint.sh"]
