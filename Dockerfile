@@ -13,6 +13,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
    # Julia
 RUN apt-get update && apt-get install -y julia
+
 USER container
 ENV  USER container
 ENV  HOME /home/container
