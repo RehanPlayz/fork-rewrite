@@ -11,8 +11,9 @@ ENV LANG en_US.UTF-8
 ENV TZ=UTC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-RUN echo "deb https://download.rethinkdb.com/apt `lsb_release -cs` main" | tee /etc/apt/sources.list.d/rethinkdb.list 
-RUN wget -qO- https://download.rethinkdb.com/apt/pubkey.gpg | apt-key add - 
+RUN export CODENAME=`lsb_release -cs`
+RUN echo "deb https://download.rethinkdb.com/debian-$CODENAME $CODENAME main" | tee /etc/apt/sources.list.d/rethinkdb.list
+RUN wget -qO- https://download.rethinkdb.com/repository/raw/pubkey.gpg | apt-key add -
 RUN apt-get update && apt-get install -y rethinkdb
 
 USER container
