@@ -18,6 +18,11 @@ RUN apt-get update && apt-get -y install python3.7 python3-pip libffi-dev \
     && pip3 install aiohttp websockets pynacl opuslib \
     && python3 -m pip install -U discord.py[voice]
 
+    # Java 13
+RUN mkdir -p /usr/share/man/man1 && wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add - && add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ 
+RUN apt-get update && apt-get -y install adoptopenjdk-13-hotspot
+RUN java -version
+
 USER container
 ENV  USER container
 ENV  HOME /home/container
