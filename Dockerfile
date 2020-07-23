@@ -2,10 +2,9 @@ FROM debian:buster-slim
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update \
-    && apt-get -y install apt-utils curl ffmpeg software-properties-common apt-transport-https ca-certificates wget dirmngr gnupg iproute2 libopus0 make g++ locales git cmake zip unzip libtool-bin autoconf automake
-RUN addgroup --gid 998 container 
-RUN useradd -r -u 999 -d /home/container -g container -m container
+RUN apt-get update && apt-get upgrade -y \
+    && apt-get -y install iptables apt-utils curl ffmpeg software-properties-common apt-transport-https ca-certificates wget dirmngr gnupg iproute2 youtube-dl sqlite3 libopus0 make g++ locales git cmake zip unzip libtool-bin autoconf automake curl jq \
+    && useradd -m -d /home/container -s /bin/bash container
 
     # Ensure UTF-8
 RUN locale-gen en_US.UTF-8
