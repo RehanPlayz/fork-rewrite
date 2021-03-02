@@ -1,0 +1,85 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v1",
+        "update_url": null
+    },
+    "exported_at": "2021-03-02T21:24:18+02:00",
+    "name": "Discord Egg",
+    "author": "itznya10@gmail.com",
+    "description": "Generic Discord Bot Egg.",
+    "features": null,
+    "images": [
+        "quay.io\/devil38\/fork-rewrite:discord-bot"
+    ],
+    "startup": ".\/start.sh",
+    "config": {
+        "files": "{}",
+        "startup": "{}",
+        "logs": "{}",
+        "stop": "^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!\/bin\/bash\r\necho hi",
+            "container": "debian:buster-slim",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": [
+        {
+            "name": "Golang version",
+            "description": "Golang",
+            "env_variable": "GOLANG_VERSION",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "Python version",
+            "description": "Python",
+            "env_variable": "PYTHON_VERSION",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "Java version",
+            "description": "Java",
+            "env_variable": "JAVA_VERSION",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "NodeJS version",
+            "description": "NodeJS",
+            "env_variable": "NODEJS_VERSION",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "Startup command",
+            "description": "NodeJS\/Golang\/Java\/Python commands",
+            "env_variable": "STARTUP_CMD",
+            "default_value": "echo hi",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|not_in:bash,sh"
+        },
+        {
+            "name": "Server type",
+            "description": "nodejs\/golang\/java\/python",
+            "env_variable": "SERVER_TYPE",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|in:golang,java,python,nodejs"
+        }
+    ]
+}
