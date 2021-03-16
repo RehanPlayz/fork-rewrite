@@ -1,0 +1,49 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v1",
+        "update_url": null
+    },
+    "exported_at": "2021-03-16T10:30:00+02:00",
+    "name": "Rust Egg",
+    "author": "itznya10@gmail.com",
+    "description": "Generic Rust Egg.",
+    "features": null,
+    "images": [
+        "quay.io\/devil38\/fork-rewrite:rust-new"
+    ],
+    "startup": ".\/start.sh",
+    "config": {
+        "files": "{}",
+        "startup": "{}",
+        "logs": "{}",
+        "stop": "^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!\/bin\/bash\r\necho hi",
+            "container": "debian:buster-slim",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": [
+        {
+            "name": "Rust Startup command",
+            "description": "Rust commands",
+            "env_variable": "STARTUP_CMD",
+            "default_value": "echo hi",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|not_in:bash,sh"
+        },
+        {
+            "name": "Rust version",
+            "description": "latest\/custom\/beta\/1.10.0-rc\/nightly",
+            "env_variable": "RUST_VERSION",
+            "default_value": "latest",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|in:custom,latest,beta,1.10.0-rc,nightly"
+        }
+    ]
+}
