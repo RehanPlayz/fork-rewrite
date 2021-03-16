@@ -4,7 +4,7 @@
         "version": "PTDL_v1",
         "update_url": null
     },
-    "exported_at": "2021-03-02T21:24:18+02:00",
+    "exported_at": "2021-03-16T10:39:55+02:00",
     "name": "Discord Egg",
     "author": "itznya10@gmail.com",
     "description": "Generic Discord Bot Egg.",
@@ -65,7 +65,7 @@
         },
         {
             "name": "Startup command",
-            "description": "NodeJS\/Golang\/Java\/Python commands",
+            "description": "NodeJS\/Golang\/Java\/Python\/Rust commands",
             "env_variable": "STARTUP_CMD",
             "default_value": "echo hi",
             "user_viewable": true,
@@ -74,12 +74,21 @@
         },
         {
             "name": "Server type",
-            "description": "nodejs\/golang\/java\/python",
+            "description": "nodejs\/golang\/java\/python\/rust",
             "env_variable": "SERVER_TYPE",
             "default_value": "",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "nullable|string|in:golang,java,python,nodejs"
+            "rules": "nullable|string|in:golang,java,python,nodejs,rust"
+        },
+        {
+            "name": "Rust version",
+            "description": "latest\/custom\/beta\/1.10.0-rc\/nightly",
+            "env_variable": "RUST_VERSION",
+            "default_value": "latest",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|in:custom,latest,beta,1.10.0-rc,nightly"
         }
     ]
 }
