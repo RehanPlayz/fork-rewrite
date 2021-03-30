@@ -328,6 +328,7 @@ export NVM_DIR="/home/container/.nvm" 2> /dev/null > /dev/null
      echo -e "Upgrading NPM to latest version"
      npm install -g npm@latest
      echo -e "==============================="
+}
 
 rust_version_manager(){
 
@@ -391,14 +392,6 @@ echo -e "==============================="
 sleep 3s
 rsvm install ${RUST_VERSION}
 rsvm use ${RUST_VERSION}
-}
-
-rust_version_manager
-
-#rustc -v
-#cargo -h
-#rustdoc -h
-
 }
 
 bot_startup(){
