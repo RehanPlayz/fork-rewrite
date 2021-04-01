@@ -200,7 +200,7 @@ custom)
 esac
 fi
 
-curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh 2> /dev/null > /dev/null
+curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | JABBA_VERSION=0.11.2 bash && . ~/.jabba/jabba.sh 2> /dev/null > /dev/null
 [ -s "$JABBA_HOME/jabba.sh" ] && source "$JABBA_HOME/jabba.sh" 2> /dev/null > /dev/null
 export TMPDIR="$HOME/temp-folder"
      sleep 5s
