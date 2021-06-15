@@ -1,4 +1,4 @@
-FROM debian:9.11-slim
+FROM quay.io/jitesoft/debian:buster-slim
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -14,7 +14,7 @@ ENV TZ=UTC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
         # NodeJS
-RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get update \
     && apt-get -y install nodejs npm node-gyp \
     && npm install discord.js node-opus opusscript \
@@ -24,7 +24,7 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 RUN apt-get update && apt-get -y install yarn
 RUN npm install -g nodemon && nodemon -v
-RUN npm install -g coffeescript typescript
+RUN npm install -g coffeescript typescript pm2 
 RUN apt-get update && apt-get -y install dnsutils python3 build-essential
 
      # Java 13
