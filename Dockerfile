@@ -16,7 +16,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
         # NodeJS
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get update \
-    && apt-get -y install nodejs npm node-gyp \
+    && apt-get -y install nodejs node-gyp \
     && npm install discord.js node-opus opusscript \
     && npm install sqlite3 --build-from-source 
 RUN npm i npm@latest -g
