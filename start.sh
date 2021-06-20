@@ -150,6 +150,7 @@ export TMPDIR="$HOME/temp-folder"
      echo -e "Using Python ${PYTHON_VERSION}"
      pyenv install "${PYTHON_VERSION}" -s
      pyenv global "${PYTHON_VERSION}"
+     export PATH="$PATH:/$HOME/.local/bin"
      curl -s https://bootstrap.pypa.io/get-pip.py -o get-pip.py
      python3 get-pip.py
      rm -rf get-pip.py
