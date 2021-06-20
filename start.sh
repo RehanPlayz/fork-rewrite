@@ -144,16 +144,12 @@ eval "$(pyenv virtualenv-init -)" 2> /dev/null > /dev/null
 export TMPDIR="$HOME/temp-folder"
      sleep 5s
      echo -e "==============================="
-     echo -e "Available Python versions: $(pyenv install --list)"
+     echo -e "To run pip install command use pyenv exec pip install"
      echo -e "==============================="
      sleep 5s
      echo -e "Using Python ${PYTHON_VERSION}"
      pyenv install "${PYTHON_VERSION}" -s
      pyenv global "${PYTHON_VERSION}"
-     export PATH="$PATH:/$HOME/.local/bin"
-     curl -s https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-     python3 get-pip.py
-     rm -rf get-pip.py
      rm -rf temp-folder/python-build*
 }
 
