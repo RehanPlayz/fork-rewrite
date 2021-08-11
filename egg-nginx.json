@@ -7,7 +7,7 @@
     "name": "Nginx",
     "author": "itznya10@gmail.com",
     "description": "Pterodactyl Nginx",
-    "image": "registry.gitlab.com\/devil38\/fork-rewrite:nginx",
+    "image": "registry.gitlab.com\/RehanPlayz\/fork-rewrite:nginx",
     "startup": ".\/start.sh",
     "config": {
         "files": "{\r\n    \"nginx\/conf.d\/default.conf\": {\r\n        \"parser\": \"file\",\r\n        \"find\": {\r\n            \"    listen \": \"    listen {{server.build.default.port}};\"\r\n        }\r\n    }\r\n}",
@@ -17,7 +17,7 @@
     },
     "scripts": {
         "installation": {
-            "script": "#!\/bin\/bash\r\n\r\napt-get update -y && apt-get install -y git wget zip unzip\r\n\r\ncd \/mnt\/server\/\r\nwget https:\/\/gitlab.com\/devil38\/fork-rewrite\/raw\/nginx\/nginx.zip\r\nunzip -o nginx.zip\r\nrm nginx.zip",
+            "script": "#!\/bin\/bash\r\n\r\napt-get update -y && apt-get install -y git wget zip unzip\r\n\r\ncd \/mnt\/server\/\r\nwget https:\/\/gitlab.com\/RehanPlayz\/fork-rewrite\/raw\/nginx\/nginx.zip\r\nunzip -o nginx.zip\r\nrm nginx.zip",
             "container": "debian:10.1-slim",
             "entrypoint": "bash"
         }
