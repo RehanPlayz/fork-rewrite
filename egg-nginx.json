@@ -5,7 +5,7 @@
     },
     "exported_at": "2019-12-28T10:26:14+01:00",
     "name": "Nginx",
-    "author": "itznya10@gmail.com",
+    "author": "RehanPlayz321@protonmail.com",
     "description": "Pterodactyl Nginx",
     "image": "registry.gitlab.com\/RehanPlayz\/fork-rewrite:nginx",
     "startup": ".\/start.sh",
